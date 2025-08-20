@@ -1,8 +1,7 @@
 'use client';
 
 import { 
-  AdjustmentsHorizontalIcon,
-  XMarkIcon 
+  AdjustmentsHorizontalIcon
 } from '@heroicons/react/24/outline';
 import { DataSummary } from '@/lib/dataLoader';
 

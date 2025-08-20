@@ -3,9 +3,7 @@
 import { useState, useEffect } from 'react';
 import { 
   ChartBarIcon, 
-  CpuChipIcon, 
-  BoltIcon,
-  BuildingOffice2Icon
+  BoltIcon
 } from '@heroicons/react/24/outline';
 import { dataLoader, DataSummary } from '@/lib/dataLoader';
 import { TechnologyChart, StatusChart, RegionChart, CapacityChart } from '@/components/Charts';

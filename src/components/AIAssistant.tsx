@@ -244,7 +244,7 @@ export function AIAssistant({ projects }: AIAssistantProps) {
         
         <div className="mt-2 flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
           <ExclamationTriangleIcon className="h-4 w-4" />
-          <span>Specialized AI analysis for Nordic Energy's renewable energy intelligence platform.</span>
+          <span>Specialized AI analysis for Nordic Energy&apos;s renewable energy intelligence platform.</span>
         </div>
       </div>
     </div>

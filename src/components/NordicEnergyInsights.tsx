@@ -3,9 +3,6 @@
 import { useState, useEffect } from 'react';
 import { 
   FireIcon, 
-  HomeIcon, 
-  SunIcon, 
-  BuildingOffice2Icon,
   ChartBarIcon
 } from '@heroicons/react/24/outline';
 import { StaticDataSummary } from '@/lib/staticDataLoader';
@@ -21,7 +18,9 @@ export function NordicEnergyInsights({ summary }: NordicEnergyInsightsProps) {
     solarIntegrationOpportunities: 0,
     multiTechAreas: 0
   });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [opportunityAnalysis, setOpportunityAnalysis] = useState<any[]>([]);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [businessMetrics, setBusinessMetrics] = useState<any>({});
 
   useEffect(() => {
@@ -97,6 +96,7 @@ export function NordicEnergyInsights({ summary }: NordicEnergyInsightsProps) {
     });
   }, [summary]);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const getOpportunityDescription = (opportunity: any): string => {
     if (opportunity.biomassCount > 10 && opportunity.successRate > 80) {
       return `High district heating potential with ${opportunity.biomassCount} biomass projects and excellent ${opportunity.successRate}% planning success rate. Ideal for Nordic Energy's integrated approach.`;
