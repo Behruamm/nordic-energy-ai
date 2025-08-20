@@ -3,9 +3,8 @@
 import { useEffect, useState, useMemo } from 'react';
 import dynamic from 'next/dynamic';
 import { EnergyProject } from '@/lib/dataLoader';
-import { convertBNGToLatLng, getTechnologyColor, getStatusColor } from '@/lib/coordinateUtils';
+import { convertBNGToLatLng, getTechnologyColor } from '@/lib/coordinateUtils';
 import { 
-  MapIcon, 
   AdjustmentsHorizontalIcon,
   XMarkIcon 
 } from '@heroicons/react/24/outline';
@@ -72,7 +71,7 @@ export function InteractiveMap({ projects }: InteractiveMapProps) {
       .slice(0, maxMarkersToShow);
 
     setFilteredProjects(limitedFiltered);
-  }, [selectedTechnology, selectedStatus, projects, maxMarkersToShow]);
+  }, [selectedTechnology, selectedStatus, projects, maxMarkersToShow, projectsWithCoords]);
 
 
 
@@ -80,6 +79,7 @@ export function InteractiveMap({ projects }: InteractiveMapProps) {
   const createCustomIcon = useMemo(() => {
     if (typeof window === 'undefined') return () => null;
     
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
     const L = require('leaflet');
     const iconCache = new Map();
     

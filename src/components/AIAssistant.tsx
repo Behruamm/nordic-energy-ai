@@ -18,7 +18,7 @@ interface Message {
 }
 
 interface AIAssistantProps {
-  projects: any[];
+  projects: unknown[];
 }
 
 const suggestedQuestions = [
@@ -206,7 +206,7 @@ export function AIAssistant({ projects }: AIAssistantProps) {
                 className="text-left p-2 text-sm text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
                 disabled={isLoading}
               >
-                "{question}"
+                &ldquo;{question}&rdquo;
               </button>
             ))}
           </div>

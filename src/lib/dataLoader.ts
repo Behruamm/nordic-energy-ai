@@ -87,7 +87,7 @@ class DataLoader {
             this.isLoaded = true;
             resolve(this.data);
           },
-          error: (error: any) => {
+          error: (error: Error) => {
             reject(new Error(`CSV parsing failed: ${error.message}`));
           }
         });

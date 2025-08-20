@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { 
   ChartBarIcon, 
   CpuChipIcon, 
-  DocumentArrowDownIcon,
   BoltIcon,
   BuildingOffice2Icon
 } from '@heroicons/react/24/outline';
