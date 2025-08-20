@@ -76,6 +76,12 @@ export function AIAssistant({ projects }: AIAssistantProps) {
     setIsLoading(true);
 
     try {
+      // Get recent conversation history for context (last 8 messages)
+      const recentMessages = messages.slice(-8).map(msg => ({
+        role: msg.type === 'user' ? 'user' : 'assistant',
+        content: msg.content
+      }));
+
       const response = await fetch('/api/ai-chat', {
         method: 'POST',
         headers: {
@@ -83,7 +89,8 @@ export function AIAssistant({ projects }: AIAssistantProps) {
         },
         body: JSON.stringify({
           message: messageToSend,
-          projectsCount: projects.length
+          projectsCount: projects.length,
+          conversationHistory: recentMessages
         }),
       });
 
