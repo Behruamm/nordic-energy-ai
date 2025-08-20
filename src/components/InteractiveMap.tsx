@@ -27,6 +27,7 @@ export function InteractiveMap({ projects }: InteractiveMapProps) {
   const [filteredProjects, setFilteredProjects] = useState<EnergyProject[]>([]);
   const [selectedTechnology, setSelectedTechnology] = useState<string>('all');
   const [selectedStatus, setSelectedStatus] = useState<string>('all');
+  const [selectedFocus, setSelectedFocus] = useState<string>('all');
   const [showFilters, setShowFilters] = useState(false);
   const [mapCenter] = useState<[number, number]>([54.5, -2.0]); // UK center
   const [mapZoom] = useState(6);
@@ -45,6 +46,16 @@ export function InteractiveMap({ projects }: InteractiveMapProps) {
   // Get unique technologies and statuses for filters
   const technologies = Array.from(new Set(projectsWithCoords.map(p => p.technologyType).filter(Boolean)));
   const statuses = Array.from(new Set(projectsWithCoords.map(p => p.developmentStatusShort).filter(Boolean)));
+  
+  // Nordic Energy focus areas
+  const nordicFocusAreas = [
+    { value: 'all', label: 'All Technologies' },
+    { value: 'district-heating', label: 'District Heating & CHP' },
+    { value: 'heat-pumps', label: 'Heat Pump Suitable Areas' },
+    { value: 'solar-integration', label: 'Solar + Storage Integration' },
+    { value: 'multi-tech', label: 'Multi-Technology Opportunities' },
+    { value: 'local-authority', label: 'Local Authority Projects' }
+  ];
 
   useEffect(() => {
     setIsClient(true);
@@ -65,13 +76,52 @@ export function InteractiveMap({ projects }: InteractiveMapProps) {
       );
     }
 
+    // Nordic Energy focus area filtering
+    if (selectedFocus !== 'all') {
+      switch (selectedFocus) {
+        case 'district-heating':
+          filtered = filtered.filter(project => 
+            project.technologyType?.toLowerCase().includes('biomass') ||
+            project.technologyType?.toLowerCase().includes('chp') ||
+            project.technologyType?.toLowerCase().includes('combined heat') ||
+            project.installedCapacity > 5 // Larger projects suitable for district heating
+          );
+          break;
+        case 'heat-pumps':
+          filtered = filtered.filter(project => 
+            project.technologyType?.toLowerCase().includes('heat pump') ||
+            (project.technologyType?.toLowerCase().includes('solar') && project.installedCapacity < 10) // Small-scale suitable for heat pump integration
+          );
+          break;
+        case 'solar-integration':
+          filtered = filtered.filter(project => 
+            project.technologyType?.toLowerCase().includes('solar') ||
+            project.technologyType?.toLowerCase().includes('battery') ||
+            project.technologyType?.toLowerCase().includes('storage')
+          );
+          break;
+        case 'multi-tech':
+          // Show areas with multiple technology types nearby (simplified)
+          filtered = filtered.filter(project => project.installedCapacity > 10);
+          break;
+        case 'local-authority':
+          filtered = filtered.filter(project => 
+            project.operator?.toLowerCase().includes('council') ||
+            project.operator?.toLowerCase().includes('authority') ||
+            project.operator?.toLowerCase().includes('borough') ||
+            project.operator?.toLowerCase().includes('city')
+          );
+          break;
+      }
+    }
+
     // Limit markers for performance - show largest capacity projects first
     const limitedFiltered = filtered
       .sort((a, b) => (b.installedCapacity || 0) - (a.installedCapacity || 0))
       .slice(0, maxMarkersToShow);
 
     setFilteredProjects(limitedFiltered);
-  }, [selectedTechnology, selectedStatus, projects, maxMarkersToShow, projectsWithCoords]);
+  }, [selectedTechnology, selectedStatus, selectedFocus, projects, maxMarkersToShow, projectsWithCoords]);
 
 
 
@@ -148,6 +198,21 @@ export function InteractiveMap({ projects }: InteractiveMapProps) {
           </div>
 
           <div className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                Nordic Energy Focus
+              </label>
+              <select
+                value={selectedFocus}
+                onChange={(e) => setSelectedFocus(e.target.value)}
+                className="w-full p-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white cursor-pointer"
+              >
+                {nordicFocusAreas.map(focus => (
+                  <option key={focus.value} value={focus.value}>{focus.label}</option>
+                ))}
+              </select>
+            </div>
+
             <div>
               <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                 Technology Type

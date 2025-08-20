@@ -49,7 +49,7 @@ export function TechnologyChart({ summary }: ChartsProps) {
   const hasMore = allData.length > DISPLAY_LIMIT;
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700">
+    <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-100 dark:border-slate-700/50 hover:border-slate-200 dark:hover:border-slate-600 transition-all duration-300 shadow-sm">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
           Technology Types
@@ -132,7 +132,7 @@ export function StatusChart({ summary }: ChartsProps) {
   }));
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700">
+    <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-100 dark:border-slate-700/50 hover:border-slate-200 dark:hover:border-slate-600 transition-all duration-300 shadow-sm">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
           Development Status
@@ -250,7 +250,7 @@ export function RegionChart({ summary }: ChartsProps) {
 
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700">
+    <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-100 dark:border-slate-700/50 hover:border-slate-200 dark:hover:border-slate-600 transition-all duration-300 shadow-sm">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
           Projects by Region
@@ -332,7 +332,7 @@ export function CapacityChart({ summary }: ChartsProps) {
     .slice(0, 8);
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700">
+    <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-100 dark:border-slate-700/50 hover:border-slate-200 dark:hover:border-slate-600 transition-all duration-300 shadow-sm">
       <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">
         Estimated Capacity by Technology (MW)
       </h3>

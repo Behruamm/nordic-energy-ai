@@ -18,21 +18,21 @@ interface SidebarProps {
 const navigationItems = [
   {
     id: 'dashboard',
-    name: 'Dashboard',
+    name: 'Intelligence Hub',
     icon: HomeIcon,
-    description: 'Overview & Analytics'
+    description: 'Nordic Energy insights'
   },
   {
     id: 'ai-chat',
-    name: 'AI Assistant',
+    name: 'AI Analyst',
     icon: ChatBubbleLeftRightIcon,
-    description: 'Ask questions about data'
+    description: 'Strategic energy intelligence'
   },
   {
     id: 'map',
-    name: 'Map View',
+    name: 'Project Map',
     icon: MapIcon,
-    description: 'Geographic insights'
+    description: 'Geographic opportunities'
   }
 ];
 
@@ -43,8 +43,8 @@ export function Sidebar({ activeSection, onSectionChange }: SidebarProps) {
     <div className={`
       ${isCollapsed ? 'w-16' : 'w-64'} 
       transition-all duration-300 ease-in-out
-      bg-white dark:bg-slate-900 text-slate-900 dark:text-white flex flex-col h-screen
-      border-r border-slate-200 dark:border-slate-800 shadow-sm
+      bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl text-slate-900 dark:text-white flex flex-col h-screen
+      border-r border-slate-200/50 dark:border-slate-800/50
     `}>
       {/* Header */}
       <div className="p-4 border-b border-slate-200 dark:border-slate-800">
@@ -56,7 +56,7 @@ export function Sidebar({ activeSection, onSectionChange }: SidebarProps) {
               </div>
               <div>
                 <h1 className="text-lg font-semibold text-slate-900 dark:text-white">Nordic Energy AI</h1>
-                <p className="text-xs text-slate-500 dark:text-slate-400">Analytics Platform</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400">Intelligence Platform</p>
               </div>
             </div>
           )}
@@ -84,8 +84,8 @@ export function Sidebar({ activeSection, onSectionChange }: SidebarProps) {
                     w-full flex items-center gap-3 px-3 py-3 rounded-lg
                     transition-all duration-200 cursor-pointer
                     ${isActive 
-                      ? 'bg-blue-600 text-white shadow-lg' 
-                      : 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-blue-50 dark:hover:bg-slate-800 hover:shadow-sm'
+                      ? 'bg-blue-600/90 text-white backdrop-blur-sm' 
+                      : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-white/50 dark:hover:bg-slate-800/50'
                     }
                     ${isCollapsed ? 'justify-center' : 'justify-start'}
                   `}
@@ -107,24 +107,23 @@ export function Sidebar({ activeSection, onSectionChange }: SidebarProps) {
 
       {/* Footer / Collapse Button */}
       <div className="p-4 border-t border-slate-200 dark:border-slate-800">
-        <button
-          onClick={() => setIsCollapsed(!isCollapsed)}
-          className="
-            w-full flex items-center justify-center gap-2 
-            px-3 py-2 rounded-lg text-slate-500 dark:text-slate-400 
-            hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer
-            transition-colors duration-200
-          "
-        >
-          {isCollapsed ? (
-            <ChevronRightIcon className="h-5 w-5" />
-          ) : (
-            <>
+        <div className="flex justify-end">
+          <button
+            onClick={() => setIsCollapsed(!isCollapsed)}
+            className="
+              p-2 rounded-lg text-slate-500 dark:text-slate-400 
+              hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer
+              transition-colors duration-200
+            "
+            title={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+          >
+            {isCollapsed ? (
+              <ChevronRightIcon className="h-5 w-5" />
+            ) : (
               <ChevronLeftIcon className="h-5 w-5" />
-              <span className="text-sm">Collapse</span>
-            </>
-          )}
-        </button>
+            )}
+          </button>
+        </div>
       </div>
     </div>
   );

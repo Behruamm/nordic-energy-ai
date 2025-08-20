@@ -7,14 +7,14 @@
 
 ## 🎯 Project Overview
 
-**Nordic Energy AI** is a comprehensive renewable energy intelligence platform that transforms raw UK government data into actionable business insights. The platform analyzes over **13,000 renewable energy projects** from the UK's REPD (Renewable Energy Planning Database) to provide strategic intelligence for investors, developers, and policymakers.
+**Nordic Energy AI** is an intelligent business development platform that transforms UK renewable energy data into actionable opportunities. Built specifically for Nordic Energy's methodology, it analyzes **13,000+ energy projects** to identify district heating potential, local authority targets, and multi-technology integration opportunities.
 
 ### 🌟 Key Capabilities
 
-- **📊 Interactive Data Visualization** - Professional charts and analytics
-- **🗺️ Geographic Intelligence** - Interactive maps showing project locations  
-- **🤖 AI-Powered Analysis** - Natural language queries about energy data
-- **📱 Modern Interface** - Responsive design with dark/light mode support
+- **🎯 Nordic Energy Intelligence** - Specialized insights for district heating and integrated solutions
+- **📍 Postcode Opportunity Analysis** - AI-powered local market assessment
+- **🏛️ Local Authority Targeting** - Identify high-potential council prospects
+- **🤖 Conversational AI** - Ask complex questions in natural language
 
 ## 🚀 Live Demo
 
@@ -22,86 +22,68 @@
 
 *Experience the full platform with real UK renewable energy data*
 
-## 💡 Business Value Proposition
+## 💡 Core Use Cases
 
-### For Energy Investors
-- **Market Intelligence**: Identify high-potential regions and technologies
-- **Risk Assessment**: Analyze project success rates and development timelines
-- **Portfolio Optimization**: Compare technology types and capacity trends
+### 🎯 Business Development Intelligence
+- **Prospect Identification**: Find councils with energy gaps Nordic Energy can fill
+- **Opportunity Scoring**: Rank regions by district heating potential (1-10 scale)
+- **Market Analysis**: Identify failed projects for intervention opportunities
 
-### For Energy Developers  
-- **Site Selection**: Find optimal locations based on historical data
-- **Competitive Analysis**: Understand market saturation and opportunities
-- **Planning Insights**: Learn from successful project patterns
+### 📍 Client Meeting Preparation  
+- **Postcode Analysis**: Enter client postcode for instant opportunity assessment
+- **Success Rate Intelligence**: Planning approval rates by region and technology
+- **Competitive Positioning**: Understand local market dynamics and key players
 
-### For Policymakers
-- **Progress Tracking**: Monitor renewable energy development across regions
-- **Policy Impact**: Analyze the effectiveness of planning decisions
-- **Strategic Planning**: Identify areas needing support or intervention
+### 🏛️ Local Authority Targeting
+- **Council Intelligence**: Identify high-potential local authority prospects
+- **Project Pipeline**: Track planning applications and development timelines
+- **Stakeholder Mapping**: Understand regional energy decision-makers
 
 ## 🎨 Platform Features
 
-### 1. **Intelligent Dashboard**
-- Real-time overview of 13,000+ renewable energy projects
-- Key metrics: Total capacity (GW), operational projects, technology distribution
-- Interactive charts showing regional trends and development status
+### 1. **Nordic Energy Intelligence Hub**
+- **Overview Tab**: Complete UK renewable energy landscape with interactive filters
+- **Nordic Focus Tab**: Business development opportunities with real-time scoring
+- **Opportunity Analysis**: Top 5 regions ranked by district heating potential
 
-### 2. **AI Assistant**
-- Natural language queries: *"Which regions have the most offshore wind potential?"*
-- Powered by Claude AI for intelligent data analysis
-- Business-focused insights and recommendations
+### 2. **AI Energy Analyst**
+- **Postcode Intelligence**: *"Analyze B1 1RG for district heating opportunities"*
+- **Business Queries**: *"Which councils need Nordic Energy's expertise?"*
+- **Conversation Memory**: Maintains context across multiple questions
 
-### 3. **Interactive Map**
-- Geographic visualization of project locations across the UK
-- Filter by technology type (Solar, Wind, Biomass, etc.)
-- Filter by development status (Operational, Under Construction, etc.)
-- Performance-optimized to handle thousands of data points
-
-### 4. **Professional Analytics**
-- Technology comparison charts
-- Regional development analysis  
-- Development status breakdowns
-- Capacity analysis by technology type
+### 3. **Interactive Project Map**
+- **Geographic Visualization**: 13,000+ projects across the UK
+- **Nordic Energy Filters**: District heating, local authority projects, integration zones
+- **Performance Optimized**: Smart clustering for smooth interaction
 
 ## 🛠️ Technical Excellence
 
 ### Modern Tech Stack
-- **Frontend**: Next.js 15 + React 19 + TypeScript
-- **Styling**: Tailwind CSS v4 for modern, responsive design
-- **AI Integration**: Anthropic Claude API for intelligent analysis
-- **Data Visualization**: Recharts for professional charts
-- **Maps**: React Leaflet for interactive geographic visualization
-- **Performance**: Optimized for fast loading and smooth interactions
+- **Frontend**: Next.js 15 + React 19 + TypeScript + Inter font
+- **AI Integration**: Claude 3.5 Sonnet with conversation memory
+- **Data Processing**: Real-time CSV parsing of 13,000+ records
+- **UI Design**: Minimalist glassmorphism with professional contrast
 
 ### Key Technical Features
-- **Real-time data processing** of large datasets (13,000+ records)
-- **Intelligent caching** for optimal performance
-- **Responsive design** that works on all devices
-- **Professional UI/UX** with dark mode support
-- **API integration** for AI-powered insights
+- **Smart Data Filtering**: Real-time chart updates based on user selections
+- **Conversation Context**: AI remembers previous questions for natural dialogue
+- **Performance Optimization**: Map clustering for smooth interaction with 1,000+ markers
+- **Business Intelligence**: Automated opportunity scoring and market analysis
 
 ## 🎯 Why This Project for Nordic Energy?
 
-### 1. **Industry Relevance**
-- Demonstrates deep understanding of renewable energy sector
-- Uses real UK government data (REPD database)
-- Addresses actual business needs in energy intelligence
+### **Perfect Business Alignment**
+This platform directly supports Nordic Energy's "concept to completion" methodology by providing:
+- **District heating opportunity identification** - Your core specialty
+- **Local authority intelligence** - Your primary client base  
+- **Multi-technology integration analysis** - Your integrated approach
+- **AI-powered business development** - Exactly what the AI Automation Associate role requires
 
-### 2. **Technical Proficiency**
-- Modern full-stack development skills
-- AI integration and data analysis capabilities
-- Professional-grade UI/UX design
-- Performance optimization expertise
-
-### 3. **Business Acumen**
-- Understands stakeholder needs (investors, developers, policymakers)
-- Transforms raw data into actionable insights
-- Creates value through intelligent analysis and visualization
-
-### 4. **Innovation**
-- AI-powered natural language queries
-- Interactive geographic intelligence
-- Modern, user-friendly interface design
+### **Demonstrates Required Skills**
+- **AI Automation**: Claude AI integration with intelligent prompting
+- **Business Intelligence**: Transforms data into actionable opportunities
+- **Modern Development**: Full-stack implementation with professional UI/UX
+- **Problem Solving**: Built tools that solve real Nordic Energy business challenges
 
 ## 🚀 Getting Started
 
@@ -140,15 +122,15 @@ The platform analyzes the **UK Renewable Energy Planning Database (REPD)**, whic
 
 ## 🎖️ Project Highlights
 
-- **13,000+ Projects Analyzed** - Comprehensive UK renewable energy dataset
-- **AI-Powered Insights** - Natural language queries with intelligent responses
-- **Performance Optimized** - Handles large datasets with smooth interactions
-- **Professional Design** - Enterprise-grade UI suitable for business presentations
-- **Full-Stack Implementation** - Complete solution from data processing to user interface
+- **Real Business Intelligence** - Opportunity scoring algorithm ranking regions 1-10
+- **Nordic Energy Focused** - District heating analysis, local authority targeting
+- **AI Conversation Memory** - Contextual dialogue for complex analysis
+- **Professional UI/UX** - Modern, minimalist design with Inter typography
+- **Production Ready** - Deployed on Vercel with full functionality
 
-## 👨‍💻 About Me
+## 👨‍💻 About This Project
 
-This project demonstrates my passion for AI Automation and ability to create professional-grade applications that solve real business problems. I'm excited about the opportunity to contribute to Nordic Energy's mission of advancing sustainable energy solutions.
+Built specifically to demonstrate AI automation capabilities for Nordic Energy's business development needs. This project showcases my ability to understand complex business requirements and create intelligent tools that provide genuine value - exactly what the AI Automation Associate role requires.
 
 ---
 

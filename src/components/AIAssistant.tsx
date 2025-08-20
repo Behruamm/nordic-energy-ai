@@ -23,12 +23,12 @@ interface AIAssistantProps {
 }
 
 const suggestedQuestions = [
-  "Which regions have the most renewable energy projects?",
-  "What's the success rate for offshore wind projects?",
-  "Compare solar vs wind energy development",
-  "Which technology has the fastest approval process?",
-  "Show me investment opportunities in Scotland",
-  "What are the trends in renewable energy capacity?"
+  "Analyze district heating potential in Birmingham (B1 postcode area)",
+  "What's the optimal energy mix for local authority net-zero projects?",
+  "Compare heat pump vs district heating opportunities by region",
+  "Which areas have fastest planning approval for integrated energy solutions?",
+  "Show me multi-technology integration opportunities in Scotland",
+  "Analyze stakeholder engagement success rates for energy projects"
 ];
 
 export function AIAssistant({ projects }: AIAssistantProps) {
@@ -36,7 +36,7 @@ export function AIAssistant({ projects }: AIAssistantProps) {
     {
       id: '1',
       type: 'ai',
-      content: "Hi! I'm your AI energy analyst. I can help you understand the UK renewable energy landscape. Ask me anything about the data - like regional trends, technology comparisons, or investment opportunities!",
+      content: "Welcome to Nordic Energy AI Intelligence! I'm your specialized energy analyst with access to 13,000+ UK renewable energy projects. I can help you identify district heating opportunities, analyze local authority targets, assess multi-technology integration potential, and provide strategic insights for net-zero project delivery. What would you like to explore?",
       timestamp: new Date()
     }
   ]);
@@ -144,9 +144,9 @@ export function AIAssistant({ projects }: AIAssistantProps) {
             <CpuChipIcon className="h-5 w-5 text-white" />
           </div>
           <div>
-            <h2 className="text-lg font-semibold text-slate-900 dark:text-white">AI Energy Analyst</h2>
+            <h2 className="text-lg font-semibold text-slate-900 dark:text-white">Nordic Energy AI Analyst</h2>
             <p className="text-sm text-slate-600 dark:text-slate-400">
-              Analyzing {projects.length.toLocaleString()} renewable energy projects
+              Specialized intelligence for net-zero project delivery
             </p>
           </div>
         </div>
@@ -204,7 +204,7 @@ export function AIAssistant({ projects }: AIAssistantProps) {
       {messages.length <= 1 && (
         <div className="p-4 border-t border-slate-200 dark:border-slate-700">
           <p className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
-            Try asking:
+            Nordic Energy Intelligence - Try asking:
           </p>
           <div className="grid grid-cols-1 gap-2">
             {suggestedQuestions.slice(0, 3).map((question, index) => (
@@ -228,7 +228,7 @@ export function AIAssistant({ projects }: AIAssistantProps) {
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="Ask me anything about renewable energy data..."
+            placeholder="Ask about district heating opportunities, postcode analysis, or integration strategies..."
             className="flex-1 px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 resize-none"
             rows={2}
             disabled={isLoading}
@@ -244,7 +244,7 @@ export function AIAssistant({ projects }: AIAssistantProps) {
         
         <div className="mt-2 flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
           <ExclamationTriangleIcon className="h-4 w-4" />
-          <span>AI responses are based on the loaded dataset and may not reflect real-time information.</span>
+          <span>Specialized AI analysis for Nordic Energy's renewable energy intelligence platform.</span>
         </div>
       </div>
     </div>
