@@ -87,7 +87,8 @@ class DataLoader {
             this.isLoaded = true;
             resolve(this.data);
           },
-          error: (error: Error) => {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          error: (error: any) => {
             reject(new Error(`CSV parsing failed: ${error.message}`));
           }
         });

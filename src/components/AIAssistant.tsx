@@ -17,8 +17,9 @@ interface Message {
   isLoading?: boolean;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 interface AIAssistantProps {
-  projects: unknown[];
+  projects: any[];
 }
 
 const suggestedQuestions = [

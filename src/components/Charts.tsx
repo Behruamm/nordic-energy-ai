@@ -172,8 +172,9 @@ export function StatusChart({ summary }: ChartsProps) {
                 fontSize: '14px',
                 padding: '12px'
               }}
-              formatter={(value: number, name: string, props: { payload: { percentage: string } }) => {
-                const percentage = props.payload.percentage;
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              formatter={(value: number, name: string, props: any) => {
+                const percentage = props?.payload?.percentage;
                 if (name === 'Others' && showDetails) {
                   return [
                     <div key="others-details" style={{ color: 'white' }}>
@@ -200,7 +201,8 @@ export function StatusChart({ summary }: ChartsProps) {
             />
             <Legend 
               wrapperStyle={{ paddingTop: '20px' }}
-              formatter={(value, entry: { payload: { percentage: string } }) => (
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              formatter={(value, entry: any) => (
                 <span className="text-xs text-slate-700 dark:text-slate-300">
                   {value} ({entry.payload.percentage}%)
                 </span>
@@ -296,7 +298,8 @@ export function RegionChart({ summary }: ChartsProps) {
                   borderRadius: '8px',
                   color: 'white'
                 }}
-                formatter={(value: number, name: string, props: { payload: { percentage: string } }) => [
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                formatter={(value: number, name: string, props: any) => [
                   `${value.toLocaleString()} projects (${props.payload.percentage}%)`, 
                   'Projects'
                 ]}
