@@ -18,7 +18,7 @@
 
 ## 🚀 Live Demo
 
-**[View Live Application →](your-vercel-url-here)**
+**[View Live Application →](https://nordic-energy-ai.vercel.app/)**
 
 *Experience the full platform with real UK renewable energy data*
 
@@ -146,9 +146,9 @@ The platform analyzes the **UK Renewable Energy Planning Database (REPD)**, whic
 - **Professional Design** - Enterprise-grade UI suitable for business presentations
 - **Full-Stack Implementation** - Complete solution from data processing to user interface
 
-## 👨‍💻 About the Developer
+## 👨‍💻 About Me
 
-This project demonstrates my passion for renewable energy and ability to create professional-grade applications that solve real business problems. I'm excited about the opportunity to contribute to Nordic Energy's mission of advancing sustainable energy solutions.
+This project demonstrates my passion for AI Automation and ability to create professional-grade applications that solve real business problems. I'm excited about the opportunity to contribute to Nordic Energy's mission of advancing sustainable energy solutions.
 
 ---
 
