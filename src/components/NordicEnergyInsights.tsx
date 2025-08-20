@@ -5,10 +5,10 @@ import {
   FireIcon, 
   ChartBarIcon
 } from '@heroicons/react/24/outline';
-import { StaticDataSummary } from '@/lib/staticDataLoader';
+import { DataSummary } from '@/lib/dataLoader';
 
 interface NordicEnergyInsightsProps {
-  summary: StaticDataSummary;
+  summary: DataSummary;
 }
 
 export function NordicEnergyInsights({ summary }: NordicEnergyInsightsProps) {
